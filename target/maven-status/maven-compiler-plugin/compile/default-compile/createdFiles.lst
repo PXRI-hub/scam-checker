@@ -1,0 +1,8 @@
+scamchecker/Main.class
+scamchecker/Finding.class
+scamchecker/ScanResult.class
+scamchecker/ScanServer.class
+scamchecker/ScamScanner$Rule.class
+scamchecker/ServerMain.class
+scamchecker/ScamScanner.class
+scamchecker/Json.class
