@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Paste a suspicious text or email and see the warning signs highlighted." />
+    <title>Scam Checker</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="top">
+        <p class="prompt"><span class="accent">&gt;</span> scam-checker<span class="cursor">_</span></p>
+        <h1>Is this message a scam?</h1>
+        <p class="lead">Paste a text or email. I'll point out the warning signs, word by word.</p>
+      </header>
+
+      <main>
+        <section class="card" aria-labelledby="input-label">
+          <label id="input-label" for="message" class="label">Your message</label>
+          <textarea id="message" rows="7" maxlength="5000" placeholder="Paste the message here..."></textarea>
+
+          <div class="examples" aria-label="Example messages">
+            <span class="muted">Try an example:</span>
+            <button type="button" class="chip" data-example="bank">Bank alert</button>
+            <button type="button" class="chip" data-example="boss">Gift cards</button>
+            <button type="button" class="chip" data-example="cra">Tax threat</button>
+            <button type="button" class="chip" data-example="normal">Normal message</button>
+          </div>
+
+          <div class="actions">
+            <button id="check" type="button" class="primary">Check message</button>
+            <button id="clear" type="button" class="ghost">Clear</button>
+            <span id="counter" class="muted counter">0 / 5000</span>
+          </div>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </section>
+
+        <section id="result" class="card result" hidden aria-live="polite">
+          <div class="verdict">
+            <div>
+              <p class="label">Risk level</p>
+              <p id="level" class="level"></p>
+              <p id="score" class="muted"></p>
+            </div>
+            <div id="meter" class="meter" role="img"></div>
+          </div>
+
+          <h2>Your message, marked up</h2>
+          <p id="marked" class="marked"></p>
+
+          <h2>What I found</h2>
+          <ul id="findings" class="findings"></ul>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          This checks for common warning signs using fixed rules. It can't prove a message is or isn't
+          a scam. If you're unsure, contact the company using a number you already trust.
+        </p>
+        <p>
+          Privacy: your message is sent to the checker only to be scanned. It isn't saved or logged.
+        </p>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
