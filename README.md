@@ -3,6 +3,11 @@
 A small Java tool that reads a message and points out common scam warning signs: pressure to act fast, gift card or crypto payments, threats about your account, requests for codes, and links that look fake.
 
 It follows plain rules. It does not use AI, and it can't prove a message is or isn't a scam. A low score only means it found nothing it knows to look for.
+## About the live demo
+
+The page at https://pxri-hub.github.io/scam-checker/ is a **visual demo only**. GitHub Pages can host the website, but it can't run the Java server that does the actual scanning. So on the live page, the **Check message** button won't work yet.
+
+To see the real thing working, run the Java server and the website on your own computer. The steps are under "How to run it" below.
 
 ## How it fits together
 
